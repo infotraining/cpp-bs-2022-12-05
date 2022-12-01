@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+
+  <Catch2Adapter>
+    <DebugBreak>on</DebugBreak>
+    <FilenameFilter>^ex_</FilenameFilter>
+    <ForceListContent>true</ForceListContent>
+  </Catch2Adapter>
+  
+</RunSettings>
