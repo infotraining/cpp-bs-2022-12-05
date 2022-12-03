@@ -1,4 +1,4 @@
-#include <catch2/catch_test_macros.hpp>
+#include "catch.hpp"
 
 TEST_CASE("palindromes")
 {
@@ -32,4 +32,3 @@ TEST_CASE("palindromes")
 	//	REQUIRE_FALSE(is_palindrome(str));
 	//}
 }
-

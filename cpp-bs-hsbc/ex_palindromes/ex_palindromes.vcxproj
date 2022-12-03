@@ -126,6 +126,9 @@
     <ClCompile Include="ex_palindromes.cpp" />
     <ClCompile Include="test_palindromes.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="catch.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

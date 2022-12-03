@@ -4,8 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <catch2/catch_test_macros.hpp>
-#include <catch2/catch_approx.hpp>
+#include "catch.hpp"
 
 using namespace std;
 
@@ -15,11 +14,10 @@ namespace MyMath
 
 } // namespace MyMath
 
-using namespace MyMath;
-using Catch::Approx;
-
 TEST_CASE("Vector2D")
 {
+	using namespace MyMath;
+
 	// uncomment lines below 
 	//
 
@@ -65,6 +63,8 @@ TEST_CASE("Vector2D")
 
 TEST_CASE("Vector2D - operators")
 {
+	using namespace MyMath;
+
 	// uncomment lines below 
 	//
 
@@ -131,4 +131,3 @@ TEST_CASE("Vector2D - operators")
 	//	REQUIRE(ss.str() == "Vector2D(1.0, 2.0)");
 	//}
 }
-
