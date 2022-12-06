@@ -4,6 +4,10 @@
 
 * https://infotraining.bitbucket.io/cpp-bs/
 
+## Books
+
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html
+
 ## Wymagania
 
 * Visual Studio 2017
