@@ -8,6 +8,14 @@
 
 using namespace std::literals;
 
+////////////////////////////////
+// type aliases
+typedef signed int INT_32; // legacy syntax
+using INT_64 = long long int; // modern syntax
+using DataSet = std::vector<double>;
+
+INT_32 counter = 0;
+
 namespace Helpers
 {
 	void print_line(char c = '-', size_t length = 40)
@@ -57,6 +65,7 @@ int main()
 	std::cout << "sizeof(long long): " << sizeof(long long) << "\n";
 
 	char c = 65;
+	char character = 'A';
 	auto cplus1{ c + 1 };
 	std::cout << "c: " << c << "\n";
 
@@ -241,7 +250,7 @@ int main()
 	int& ref_value = original_value; // binding 
 
 	ref_value += 10;
-	std::cout << "original_value: " << original_value << "\n";
+	std::cout << "original_value: " << ref_value << "\n";
 
 	// beware!!!
 	const std::string& one_word = words[0];
@@ -256,7 +265,7 @@ int main()
 
 	////////////////////////////////////////
 	// pointer types	
-	auto* ptr_int = &original_value;
+	int* ptr_int = &original_value;
 
 	std::cout << "ptr_int: " << ptr_int << " -> " << *ptr_int << "\n";
 	int target_value = *ptr_int;
