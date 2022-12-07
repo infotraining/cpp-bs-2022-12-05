@@ -8,6 +8,10 @@
 
 * https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html
 
+## Cling
+
+* https://github.com/jupyter-xeus/xeus-cling
+
 ## Wymagania
 
 * Visual Studio 2017
