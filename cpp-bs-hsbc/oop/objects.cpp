@@ -3,5 +3,4 @@
 
 int main()
 {
-	Banking::BankAccount ba1;
 }
