@@ -20,7 +20,7 @@ namespace LegacyCode
 
 	double avg(const int* begin, const int* end)
 	{
-		assert(begin != end);
+		assert(begin != end);  // array cannot be empty
 
 		double sum = 0.0;
 
@@ -53,5 +53,4 @@ int main()
 
 	std::cout << "avg with pointers: "
 		<< LegacyCode::avg(oldschool_data, oldschool_data + size) << "\n";
-
 }

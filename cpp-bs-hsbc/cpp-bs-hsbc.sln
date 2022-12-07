@@ -30,7 +30,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dynamic-memory", "dynamic-m
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polymorphism", "polymorphism\polymorphism.vcxproj", "{2F34E225-D719-4D17-A252-4FEE48D48068}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_ex-concordance", "_ex-concordance\_ex-concordance.vcxproj", "{BF2DD3D3-02A0-48D9-A75F-640EE9371B94}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ex-concordance", "_ex-concordance\_ex-concordance.vcxproj", "{BF2DD3D3-02A0-48D9-A75F-640EE9371B94}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello-world", "hello-world\hello-world.vcxproj", "{D6C8DA84-C6E6-4E78-AAB3-906439D54FBB}"
 EndProject
@@ -156,6 +156,7 @@ Global
 		{483DA5F8-8305-4931-B60E-D6FA56FD8821} = {3413702F-6602-4919-80BD-0D336275B4A9}
 		{C11F06BA-0AB4-4EF8-9F1D-C82594AEE156} = {3413702F-6602-4919-80BD-0D336275B4A9}
 		{11C446DE-7CA8-42E2-98FF-0FEA07FCA714} = {3413702F-6602-4919-80BD-0D336275B4A9}
+		{BF2DD3D3-02A0-48D9-A75F-640EE9371B94} = {3413702F-6602-4919-80BD-0D336275B4A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCFFB361-8D2D-44EA-B25A-D6AB3BF62C1E}
