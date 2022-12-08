@@ -43,6 +43,7 @@ inline void Banking::BankAccount::check_amount(double amount)
 {
 	if (amount < 0)
 	{
-		std::terminate();
+		std::string desc = "Account#" + std::to_string(id_);
+		throw std::invalid_argument(desc + "; Amount < 0.0");
 	}
 }

@@ -11,7 +11,7 @@ namespace ooptests
 
 	TEST_CLASS(TransactionTests)
 	{
-	public:
+	public:	
 		TEST_METHOD(Operator_Equals)
 		{
 			Transaction t1{ 1, TransactionsType::deposit, 100.0 };

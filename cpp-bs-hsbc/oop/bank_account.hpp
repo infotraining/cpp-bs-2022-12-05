@@ -80,14 +80,27 @@ namespace Banking
 
 		void deposit(double amount);
 
+		double check()
+		{
+			balance_ -= check_fee_;
+			transactions_.push_back(Transaction{ id_, TransactionsType::check, check_fee_ });
+			return balance_;
+		}
+
 		const std::vector<Transaction>& transactions() const
 		{
 			return transactions_;
 		}		
+
+		static void set_check_fee(double fee)
+		{
+			check_fee_ = fee;
+		}
 	private:
 		const uint64_t id_ = 0;
 		std::string owner_ = "";
 		double balance_ = 0.0;
+		inline static double check_fee_ = 1.0;
 		std::vector<Transaction> transactions_;
 
 		void check_amount(double amount);

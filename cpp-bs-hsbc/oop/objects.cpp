@@ -3,7 +3,13 @@
 #include <vector>
 #include "bank_account.hpp"
 
-int main()
+void run_bank()
+{
+	Banking::BankAccount ba{ 1, "Jan Nowak", 1'000'000 };
+	ba.deposit(-500); // throws an exception
+}
+
+int main() // xxx
 {
 	using namespace Banking;
 
@@ -20,4 +26,20 @@ int main()
 		t.print();
 
 	std::cout << t1 << "\n";
+
+	BankAccount::set_check_fee(5.0);
+
+	BankAccount ba{ 1, "Jan Nowak", 1'000'000 };
+	std::cout << ba.check() << "\n";
+	ba.set_check_fee(2.0);
+	std::cout << ba.check() << "\n";
+	
+	try
+	{
+		run_bank();	// xxx
+	}
+	catch (const std::invalid_argument& ex)
+	{
+		std::cout << "Caught an exception: " << ex.what() << "\n";
+	}
 }
