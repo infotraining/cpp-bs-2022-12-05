@@ -18,4 +18,6 @@ int main()
 
 	for (const auto& t : vec_trans)
 		t.print();
+
+	std::cout << t1 << "\n";
 }

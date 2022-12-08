@@ -65,5 +65,5 @@ int main()
 
     auto rating = make_rating(count_words(words));
     
-    std::for_each_n(rating.begin(), 20, [](const auto& kv) { std::cout << kv.second << " - " << kv.first << "\n"; });
+    //std::for_each_n(rating.begin(), 20, [](const auto& kv) { std::cout << kv.second << " - " << kv.first << "\n"; });
 }
