@@ -29,9 +29,18 @@ namespace Banking
 		bool operator!=(const Transaction& right) const;		
 		
 		// bool operator==(const Transaction& right) const = default;  // C++20 - near future
-	};
 
-	std::ostream& operator<<(std::ostream& out, const Transaction& t);
+		friend std::ostream& operator<<(std::ostream& out, const Transaction& t)
+		{
+			char transaction_char = static_cast<char>(t.type);
+			out << "id: " << t.account_id
+				<< ", transaction type: " << transaction_char
+				<< " - " << transaction_dict.at(transaction_char)
+				<< ", amount: " << t.amount;
+
+			return out;
+		}
+	};	
 
 	//bool operator==(const Transaction& left, const Transaction& right)
 	//{

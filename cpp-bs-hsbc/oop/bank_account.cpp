@@ -1,16 +1,5 @@
 #include "bank_account.hpp"
 
-std::ostream& Banking::operator<<(std::ostream& out, const Transaction& t)
-{
-	char transaction_char = static_cast<char>(t.type);
-	out << "id: " << t.account_id
-		<< ", transaction type: " << transaction_char
-		<< " - " << transaction_dict.at(transaction_char)
-		<< ", amount: " << t.amount << "\n";
-
-	return out;
-}
-
 bool Banking::Transaction::operator==(const Transaction& right) const
 {
 	return (account_id == right.account_id)
@@ -32,7 +21,7 @@ void Banking::Transaction::print() const
 		<< ", amount: " << amount << "\n";
 }
 
-inline void Banking::BankAccount::withdraw(double amount)
+void Banking::BankAccount::withdraw(double amount)
 {
 	//assert(amount >= 0);
 	check_amount(amount);
@@ -41,7 +30,7 @@ inline void Banking::BankAccount::withdraw(double amount)
 		Transaction{ id_, TransactionsType::withdrawal, amount });
 }
 
-inline void Banking::BankAccount::deposit(double amount)
+void Banking::BankAccount::deposit(double amount)
 {
 	//assert(amount >= 0);
 	check_amount(amount);

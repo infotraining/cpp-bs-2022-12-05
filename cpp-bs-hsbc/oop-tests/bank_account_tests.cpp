@@ -29,6 +29,18 @@ namespace ooptests
 			Assert::IsTrue(t1 != t2);
 			Assert::IsTrue(t1.operator!=(t2));
 		}
+
+		TEST_METHOD(Operator_StreamOut)
+		{
+			Transaction t1{ 1, TransactionsType::deposit, 100.0 };
+			
+			std::stringstream ss;
+			ss << t1;
+
+			std::string result = ss.str();
+
+			Assert::AreEqual(result, "id: 1, transaction type: D - deposit, amount: 100"s);
+		}
 	};
 
 	TEST_CLASS(BankAccountTests)
@@ -75,7 +87,7 @@ namespace ooptests
 			BankAccount ba{ 665, "Jan Kowalski", 1'000 };
 			
 			// Act
-			ba.deposit(-500.0);
+			ba.deposit(500.0);
 
 			// Assert
 			Assert::AreEqual(ba.balance(), 1'500.0);
