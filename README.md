@@ -16,6 +16,8 @@
 ## Books
 
 * https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html
+* Discovering Modern C++, 2nd Edition - https://learning.oreilly.com/library/view/discovering-modern-c/9780136798477/
+* Programming: Principles and Practice Using C++, 2nd Edition - https://learning.oreilly.com/library/view/programming-principles-and/9780133796759/
 
 ## Cling
 
