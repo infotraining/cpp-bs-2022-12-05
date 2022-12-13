@@ -4,53 +4,15 @@
 #include <algorithm>
 #include "shape.hpp"
 
+void use_shape(Drawing::Shape& shp)
+{
+	shp.move(100, 200);
+	shp.draw();
+}
+
 int main()
 {
-	Drawing::Point pt1{ 100, 200 };
-	std::cout << "pt1.x = " << pt1.x << ", pt1.y = " << pt1.y << "\n";
-	pt1.translate(30, 50);
-	std::cout << pt1 << "\n";
-
-	std::cout << "---------------------------\n";
-
-	Drawing::Shape shp1{ 450, 200 };
-	shp1.draw();
-	shp1.move(30, 40);
-	shp1.draw();
-
-	std::cout << "---------------------------\n";
-
 	using namespace Drawing;
-
-	std::vector<Shape> shapes;
-	shapes.push_back(shp1);
-	shapes.push_back(Shape{ 100, 200 });
-	shapes.push_back(Shape(80, 400));
-
-	for (const auto& shp : shapes)
-		shp.draw();
-
-	std::cout << "---------------------------\n";
-	
-	for (auto& shp : shapes)
-		shp.move(50, 80);
-
-	for (const auto& shp : shapes)
-		shp.draw();
-
-	std::for_each(shapes.begin(), shapes.end(), [](const Shape& s) { s.draw(); });
-
-	std::cout << "---------------------------\n";
-
-	std::vector<Point> coordinates(shapes.size());
-
-	std::transform(shapes.begin(), shapes.end(), coordinates.begin(),
-		[](const Shape& shp) { return shp.get_coord(); });
-
-	for (const auto& c : coordinates)
-		std::cout << c << "\n";
-
-	std::cout << "---------------------------\n";
 
 	Rectangle rect1{ 100, 200, 400, 500 };
 	rect1.draw();
@@ -61,4 +23,42 @@ int main()
 	c1.draw();
 	c1.move(30, 50);
 	c1.draw();
+
+	std::cout << "---------------------------\n";
+
+	Shape& ref_shape = rect1; // Base type Shape refers to object of derived class Rectangle
+	ref_shape.draw();
+	ref_shape.move(100, 500);
+	
+	Shape* ptr_shape = &rect1; // Pointer to base class points to object of dervied class
+	ptr_shape->draw();
+	ptr_shape = &c1;
+	ptr_shape->draw();
+
+	use_shape(rect1);
+	use_shape(c1);
+
+	Line ln1{ 100, 200, 400, 500 };
+	use_shape(ln1);
+
+	std::cout << "---------------------------\n";
+
+	// Polymorphism + smart pointers
+
+	std::vector<std::unique_ptr<Shape>> shapes;
+	shapes.push_back(std::make_unique<Rectangle>(100, 200, 400, 500));
+	shapes.push_back(std::make_unique<Circle>(10, 20, 300));
+	shapes.push_back(std::make_unique<Line>(110, 220, 306, 506));
+
+	for (const auto& ptr_s : shapes)
+		ptr_s->draw();
+
+	std::cout << "---------------------------\n";
+
+	for (const auto& ptr_s : shapes)
+		ptr_s->move(46, 88);
+
+	for (const auto& ptr_s : shapes)
+		ptr_s->draw();
+
 }
