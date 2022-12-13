@@ -51,6 +51,8 @@ namespace Drawing
 		void draw() const;
 	};
 
+
+
 	//class Rectangle
 	//{
 	//	Point coord_;

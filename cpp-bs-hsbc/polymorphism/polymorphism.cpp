@@ -56,4 +56,9 @@ int main()
 	rect1.draw();
 	rect1.move(100, 200);
 	rect1.draw();
+
+	Circle c1{ 100, 200, 400 /*radius*/ };
+	c1.draw();
+	c1.move(30, 50);
+	c1.draw();
 }
