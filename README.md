@@ -19,6 +19,10 @@
 * Discovering Modern C++, 2nd Edition - https://learning.oreilly.com/library/view/discovering-modern-c/9780136798477/
 * Programming: Principles and Practice Using C++, 2nd Edition - https://learning.oreilly.com/library/view/programming-principles-and/9780133796759/
 
+## Recommended on YouTube
+
+* https://www.youtube.com/playlist?list=PLHTh1InhhwT5o3GwbFYy3sR7HDNRA353e
+
 ## Cling
 
 * https://github.com/jupyter-xeus/xeus-cling
